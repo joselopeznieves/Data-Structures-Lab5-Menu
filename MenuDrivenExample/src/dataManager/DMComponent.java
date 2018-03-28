@@ -72,6 +72,15 @@ public class DMComponent {
 		}
 	}
 	
+	public void removeList(String name) {
+		int index = getIndexForList(name);
+		if(index == -1)
+			IOComponent.getComponent().output("No such list, " + name + ", exists. \n");
+		else {
+			lol.remove(index);
+		}
+	}
+	
 	/**
 	 * Displays the names of all current lists in the system.
 	 */
